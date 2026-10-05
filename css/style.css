@@ -96,6 +96,7 @@ textarea:focus-visible {
   font-weight: 800;
   letter-spacing: -0.02em;
   font-size: 1.05rem;
+  white-space: nowrap;
 }
 
 .nav-toggle {
@@ -143,7 +144,7 @@ textarea:focus-visible {
   color: #fca5a5;
 }
 
-.header-cta {
+.header-cta.btn {
   display: none;
 }
 
@@ -530,7 +531,7 @@ textarea:focus-visible {
     border: 0;
   }
 
-  .header-cta {
+  .header-cta.btn {
     display: inline-flex;
   }
 
