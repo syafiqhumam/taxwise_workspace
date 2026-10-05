@@ -38,7 +38,8 @@
     "headline": "Konsultan Pajak Samarinda",
     "subheadline": "Teman ngobrol pajak buat UMKM, seller online, dan perusahaan—biar urusan pajak lebih tenang, tanpa bahasa yang bikin pusing.",
     "primaryCta": "Konsultasi gratis",
-    "secondaryCta": "Chat WhatsApp"
+    "secondaryCta": "Lihat layanan",
+    "secondaryHref": "#layanan"
   },
   "services": {
     "id": "layanan",
@@ -95,7 +96,7 @@
       { "id": "tips", "label": "Tips" },
       { "id": "berita", "label": "Berita" }
     ],
-    "afterCta": "Punya pertanyaan dari artikel di atas? Langsung tanya kami."
+    "instagramCtaPrefix": "Lihat tips lainnya di Instagram"
   },
   "articleItems": [
     {

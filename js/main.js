@@ -19,7 +19,8 @@ function renderFromContent(c) {
   setText("[data-bind='hero-headline']", c.hero.headline);
   setText("[data-bind='hero-sub']", c.hero.subheadline);
   setText("[data-bind='hero-primary']", c.hero.primaryCta);
-  setText("[data-bind='hero-wa']", c.hero.secondaryCta);
+  setText("[data-bind='hero-secondary']", c.hero.secondaryCta);
+  setHref("[data-bind='hero-secondary']", c.hero.secondaryHref);
   setText("[data-bind='header-cta']", c.cta.primary);
 
   const wa = waLink(
@@ -29,8 +30,10 @@ function renderFromContent(c) {
   document.querySelectorAll("[data-wa]").forEach((el) => el.setAttribute("href", wa));
   setHref("[data-bind='mailto']", `mailto:${c.site.email}`);
   setText("[data-bind='mailto']", c.form.emailCta);
-  setHref("[data-bind='instagram']", c.site.instagram);
-  setText("[data-bind='instagram']", c.site.instagramHandle);
+  document.querySelectorAll("[data-bind='instagram']").forEach((el) => {
+    el.setAttribute("href", c.site.instagram);
+    el.textContent = c.site.instagramHandle;
+  });
   setHref("[data-bind='maps']", c.site.mapsUrl);
   setText("[data-bind='maps']", c.site.mapsLabel);
   setText("[data-bind='address']", c.site.address);
@@ -43,7 +46,7 @@ function renderFromContent(c) {
   setText("[data-bind='audience-intro']", c.audiences.intro);
   setText("[data-bind='sharing-title']", c.articles.title);
   setText("[data-bind='sharing-intro']", c.articles.intro);
-  setText("[data-bind='sharing-cta']", c.articles.afterCta);
+  setText("[data-bind='sharing-ig-prefix']", c.articles.instagramCtaPrefix);
   setText("[data-bind='why-title']", c.why.title);
   setText("[data-bind='why-intro']", c.why.intro);
   setText("[data-bind='form-title']", c.form.title);

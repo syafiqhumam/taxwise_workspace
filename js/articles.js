@@ -20,7 +20,7 @@ export function renderArticles(content) {
     grid.innerHTML = visible
       .map((a) => {
         const placeholder = a.placeholder
-          ? `<span class="tag is-placeholder">Placeholder</span>`
+          ? `<span class="tag is-sample">Contoh</span>`
           : "";
         return `<article class="card reveal">
           <div class="article-meta">

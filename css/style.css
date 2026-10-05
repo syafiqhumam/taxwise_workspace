@@ -1,7 +1,9 @@
 :root {
   --navy: #0b1f3a;
   --navy-mid: #1e3a8a;
-  --navy-soft: #e8eef7;
+  --navy-soft: #f6f8fc;
+  --tag-bg: #e8eef7;
+  --sample: #94a3b8;
   --white: #ffffff;
   --red: #dc2626;
   --red-hover: #b91c1c;
@@ -243,8 +245,9 @@ textarea:focus-visible {
   padding: 3.5rem 0;
 }
 
-.section-muted {
-  background: #f6f8fc;
+.section-muted,
+.section-form {
+  background: var(--navy-soft);
 }
 
 .lede {
@@ -283,6 +286,16 @@ textarea:focus-visible {
   letter-spacing: 0.08em;
   text-transform: uppercase;
   margin-bottom: 0.35rem;
+}
+
+.instagram-follow {
+  padding: 0 0 3.5rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.instagram-follow a {
+  font-weight: 800;
 }
 
 .cta-band {
@@ -340,14 +353,18 @@ textarea:focus-visible {
   text-transform: uppercase;
   letter-spacing: 0.04em;
   color: var(--navy-mid);
-  background: var(--navy-soft);
+  background: var(--tag-bg);
   border-radius: 999px;
   padding: 0.15rem 0.55rem;
 }
 
-.tag.is-placeholder {
-  background: #fef2f2;
-  color: var(--red);
+.tag.is-sample {
+  background: transparent;
+  color: var(--sample);
+  border: 1px solid var(--sample);
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0;
 }
 
 .article-meta {
@@ -509,6 +526,17 @@ textarea:focus-visible {
   to {
     opacity: 1;
     transform: none;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-actions .btn {
+    width: 100%;
   }
 }
 
