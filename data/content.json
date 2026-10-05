@@ -1,0 +1,231 @@
+{
+  "site": {
+    "name": "TaxWise Consulting",
+    "shortName": "TaxWise",
+    "locale": "id-ID",
+    "title": "TaxWise Consulting | Konsultan Pajak Samarinda",
+    "description": "Konsultan pajak di Samarinda untuk UMKM, seller online, individu, dan perusahaan. Tax planning, pelaporan SPT, dan kepatuhan—ngobrol santai, hasilnya rapi.",
+    "url": "https://taxwiseconsulting.id",
+    "ogImage": "assets/og-placeholder.svg",
+    "instagram": "https://instagram.com/taxwiseconsulting.id",
+    "instagramHandle": "@taxwiseconsulting.id",
+    "whatsapp": "6282155334440",
+    "whatsappDisplay": "0821-553-4440",
+    "email": "halo@contoh-taxwise.id",
+    "emailPlaceholder": true,
+    "address": "Jl. M. Yamin No.8, Samarinda",
+    "city": "Samarinda",
+    "region": "Kalimantan Timur",
+    "country": "ID",
+    "postalCode": "",
+    "mapsUrl": "https://www.google.com/maps/search/?api=1&query=Jl.%20M.%20Yamin%20No.8%2C%20Samarinda",
+    "mapsLabel": "Lihat di Google Maps"
+  },
+  "nav": [
+    { "label": "Layanan", "href": "#layanan" },
+    { "label": "Untuk siapa", "href": "#untuk-siapa" },
+    { "label": "Sharing Pajak", "href": "#sharing" },
+    { "label": "Kenapa TaxWise", "href": "#kenapa" },
+    { "label": "Kontak", "href": "#konsultasi" }
+  ],
+  "cta": {
+    "primary": "Konsultasi gratis",
+    "whatsapp": "Chat WhatsApp",
+    "formAnchor": "#konsultasi"
+  },
+  "hero": {
+    "eyebrow": "Samarinda · Konsultan pajak",
+    "headline": "Konsultan Pajak Samarinda",
+    "subheadline": "Teman ngobrol pajak buat UMKM, seller online, dan perusahaan—biar urusan pajak lebih tenang, tanpa bahasa yang bikin pusing.",
+    "primaryCta": "Konsultasi gratis",
+    "secondaryCta": "Chat WhatsApp"
+  },
+  "services": {
+    "id": "layanan",
+    "title": "Layanan",
+    "intro": "Tiga pilar yang paling sering kami bantu. Kamu pilih kebutuhanmu, kami bantu jelaskan langkahnya dengan bahasa yang mudah.",
+    "items": [
+      {
+        "id": "tax-planning",
+        "title": "Tax Planning",
+        "text": "Merapikan strategi pajak usaha agar lebih terencana. Kami bantu lihat opsi yang sesuai kondisi bisnis, tanpa janji yang berlebihan."
+      },
+      {
+        "id": "pelaporan",
+        "title": "Pelaporan",
+        "text": "Pendampingan pelaporan SPT dan kewajiban rutin. Fokusnya: data lebih rapi, jadwal lebih jelas, dan kamu tahu apa yang perlu disiapkan."
+      },
+      {
+        "id": "kepatuhan",
+        "title": "Kepatuhan",
+        "text": "Membantu menjaga kepatuhan pajak sehari-hari—dari kelengkapan dokumen sampai kesiapan jika ada pertanyaan dari otoritas."
+      }
+    ],
+    "afterCta": "Belum yakin mulai dari mana? Ceritakan dulu, gratis."
+  },
+  "audiences": {
+    "id": "untuk-siapa",
+    "title": "Untuk siapa",
+    "intro": "Kalau urusan pajak terasa ribet atau kamu baru mulai merapikan administrasi, kamu di tempat yang tepat.",
+    "items": [
+      {
+        "title": "UMKM",
+        "text": "Usaha lokal yang ingin administrasi pajak lebih tertata, dari pencatatan sampai pelaporan."
+      },
+      {
+        "title": "Seller online",
+        "text": "Penjual di marketplace atau media sosial yang butuh panduan pajak yang relevan dengan cara jualan digital."
+      },
+      {
+        "title": "Individu",
+        "text": "Wajib pajak orang pribadi yang ingin lapor lebih tenang dan paham dokumen yang diperlukan."
+      },
+      {
+        "title": "Perusahaan",
+        "text": "Badan usaha yang butuh dampingan perencanaan, pelaporan, dan kepatuhan secara berkelanjutan."
+      }
+    ]
+  },
+  "articles": {
+    "id": "sharing",
+    "title": "Sharing Pajak",
+    "intro": "Cuplikan tips dan berita pajak—versi singkat, ramah dibaca. Kartu bertanda placeholder akan diganti dengan konten Instagram asli.",
+    "filters": [
+      { "id": "all", "label": "Semua" },
+      { "id": "tips", "label": "Tips" },
+      { "id": "berita", "label": "Berita" }
+    ],
+    "afterCta": "Punya pertanyaan dari artikel di atas? Langsung tanya kami."
+  },
+  "articleItems": [
+    {
+      "id": "pkp-umkm",
+      "category": "tips",
+      "categoryLabel": "Tips",
+      "title": "PKP untuk UMKM: kapan perlu dibahas?",
+      "excerpt": "Ringkasan umum tentang status PKP bagi pelaku UMKM. Fokusnya memahami kesiapan administrasi, bukan angka pasti.",
+      "date": "2026-09-12",
+      "placeholder": true
+    },
+    {
+      "id": "pajak-seller-online",
+      "category": "tips",
+      "categoryLabel": "Tips",
+      "title": "Pajak seller online: mulai dari yang sederhana",
+      "excerpt": "Pengingat untuk merapikan catatan penjualan online agar lebih siap saat pelaporan. Tanpa rincian tarif atau ambang tertentu.",
+      "date": "2026-09-05",
+      "placeholder": true
+    },
+    {
+      "id": "lapor-spt-tahunan",
+      "category": "tips",
+      "categoryLabel": "Tips",
+      "title": "Lapor SPT tahunan tanpa panik di menit terakhir",
+      "excerpt": "Checklist suasana: kumpulkan bukti, cek identitas, dan siapkan pertanyaan. Detail teknis menyesuaikan kondisi masing-masing.",
+      "date": "2026-08-28",
+      "placeholder": true
+    },
+    {
+      "id": "npwp-nik",
+      "category": "berita",
+      "categoryLabel": "Berita",
+      "title": "NPWP dan NIK: yang perlu dicek di data wajib pajak",
+      "excerpt": "Pengantar netral soal pemadanan identitas. Cek data resmi di kanal otoritas; kami bantu arahkan langkah administrasinya.",
+      "date": "2026-08-20",
+      "placeholder": true
+    },
+    {
+      "id": "coretax",
+      "category": "berita",
+      "categoryLabel": "Berita",
+      "title": "Coretax: transisi sistem yang perlu diikuti pelan-pelan",
+      "excerpt": "Catatan umum tentang peralihan ke Coretax. Ikuti pengumuman resmi; kami dampingi jika ada yang membingungkan di praktiknya.",
+      "date": "2026-08-12",
+      "placeholder": true
+    },
+    {
+      "id": "tanya-jawab",
+      "category": "tips",
+      "categoryLabel": "Tips",
+      "title": "Tanya jawab pajak yang sering muncul di chat",
+      "excerpt": "Kumpulan pertanyaan umum dari pelaku usaha. Jawaban selalu disesuaikan kasus—jangan meniru contoh orang lain secara mentah.",
+      "date": "2026-08-04",
+      "placeholder": true
+    }
+  ],
+  "why": {
+    "id": "kenapa",
+    "title": "Kenapa TaxWise",
+    "intro": "Kami dekat secara lokasi, ramah di komunikasi, dan fokus bantu kamu paham—bukan cuma ‘sudah beres’ tanpa penjelasan.",
+    "points": [
+      {
+        "title": "Lokal Samarinda",
+        "text": "Bertemu atau koordinasi lebih mudah. Alamat kami di Jl. M. Yamin No.8."
+      },
+      {
+        "title": "Bahasa yang ngalir",
+        "text": "Penjelasan pajak dibuat ringan, seperti ngobrol di Instagram—tetap profesional."
+      },
+      {
+        "title": "Untuk usaha kecil sampai badan",
+        "text": "UMKM, seller online, individu, dan perusahaan punya alur yang berbeda; kami sesuaikan."
+      },
+      {
+        "title": "Konsultasi awal gratis",
+        "text": "Ceritakan dulu kebutuhanmu lewat formulir atau WhatsApp. Belum ada komitmen panjang."
+      }
+    ],
+    "photoAlt": "Placeholder foto tim TaxWise Consulting di Samarinda",
+    "photoCaption": "Foto tim — placeholder, akan diganti foto asli"
+  },
+  "form": {
+    "id": "konsultasi",
+    "title": "Form konsultasi",
+    "intro": "Isi singkat di bawah. Setelah valid, tombol akan membuka WhatsApp dengan pesan yang sudah dirapikan. Tidak ada data yang disimpan di situs ini.",
+    "submitLabel": "Kirim via WhatsApp",
+    "emailCta": "atau kirim email",
+    "successHint": "WhatsApp akan terbuka di tab baru.",
+    "fields": {
+      "name": {
+        "label": "Nama",
+        "required": true,
+        "autocomplete": "name"
+      },
+      "phone": {
+        "label": "Nomor HP",
+        "required": true,
+        "autocomplete": "tel"
+      },
+      "business": {
+        "label": "Nama usaha / NPWP",
+        "required": false,
+        "autocomplete": "organization"
+      },
+      "need": {
+        "label": "Kebutuhan",
+        "required": true,
+        "options": [
+          { "value": "", "label": "Pilih kebutuhan" },
+          { "value": "Tax planning", "label": "Tax planning" },
+          { "value": "Pelaporan SPT", "label": "Pelaporan SPT" },
+          { "value": "Kepatuhan / pemeriksaan", "label": "Kepatuhan / pemeriksaan" },
+          { "value": "Sengketa", "label": "Sengketa" },
+          { "value": "Lainnya", "label": "Lainnya" }
+        ]
+      },
+      "question": {
+        "label": "Pertanyaan",
+        "required": true
+      }
+    },
+    "errors": {
+      "name": "Nama wajib diisi.",
+      "phone": "Nomor HP wajib diisi (minimal 8 digit).",
+      "need": "Pilih kebutuhan konsultasi.",
+      "question": "Tuliskan pertanyaanmu."
+    }
+  },
+  "footer": {
+    "blurb": "Konsultan pajak Samarinda. Ngobrol dulu, rapiin belakangan."
+  }
+}
