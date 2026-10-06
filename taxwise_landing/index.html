@@ -26,7 +26,7 @@
       href="https://fonts.googleapis.com/css2?family=Caveat:wght@600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="css/style.css?v=49" />
+    <link rel="stylesheet" href="css/style.css?v=50" />
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
@@ -52,6 +52,7 @@
   <body>
     <a class="skip-link" href="#konten">Lewati ke konten</a>
     <header class="site-header">
+      <div class="scroll-progress" aria-hidden="true"><span></span></div>
       <div class="container header-inner">
         <a class="logo" href="#hero" aria-label="TaxWise Consulting">
           <img src="assets/logo.png" alt="TaxWise Consulting" width="180" height="48" />
@@ -84,9 +85,19 @@
           <span class="hero-orb hero-orb-a" data-parallax="0.48"></span>
           <span class="hero-orb hero-orb-b" data-parallax="0.3"></span>
           <span class="hero-orb hero-orb-c" data-parallax="0.62"></span>
+          <svg class="hero-doodle hero-doodle-a" data-parallax="0.4" viewBox="0 0 80 40" aria-hidden="true">
+            <path d="M4 28 C18 6, 34 6, 46 22 S70 40, 76 12" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/>
+          </svg>
+          <svg class="hero-doodle hero-doodle-b" data-parallax="0.55" viewBox="0 0 36 36" aria-hidden="true">
+            <path d="M18 3 L20.4 14.2 L32 16 L20.4 17.8 L18 29 L15.6 17.8 L4 16 L15.6 14.2 Z" fill="currentColor"/>
+          </svg>
+          <svg class="hero-doodle hero-doodle-c" data-parallax="0.28" viewBox="0 0 48 48" aria-hidden="true">
+            <circle cx="24" cy="24" r="16" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M10 30 C16 22, 30 34, 40 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
         </div>
         <div class="container hero-grid">
-          <div class="hero-copy" data-parallax="-0.24">
+          <div class="hero-copy reveal" data-parallax="-0.24">
             <h1 data-bind="hero-headline">Pajak itu wajib, tapi stresnya gak harus.</h1>
             <p class="hero-tags">Tax Planning • Pelaporan • Kepatuhan</p>
             <p data-bind="hero-sub">
@@ -115,25 +126,127 @@
             <img class="hero-person hero-person-front" data-parallax="0.18" src="assets/konsultan.png" alt="Konsultan TaxWise Consulting" width="1664" height="1184" />
           </div>
         </div>
+        <svg class="wave-divider wave-divider-hero" viewBox="0 0 1440 72" preserveAspectRatio="none" aria-hidden="true">
+          <path fill="#ffffff" d="M0 40 C180 72 360 8 540 28 C720 48 900 72 1080 40 C1260 12 1380 28 1440 36 L1440 72 L0 72 Z"/>
+        </svg>
       </section>
 
+      <section class="laptop-stage" id="coretax" aria-label="Pajak beres di Coretax">
+        <div class="laptop-sticky">
+          <h2 class="laptop-title">Coretax bikin bingung? <span>Biar kami yang urus.</span></h2>
+          <div class="laptop-wrap">
+          <div class="laptop">
+            <div class="laptop-lid">
+              <div class="laptop-bezel">
+                <div class="laptop-screen" aria-hidden="true">
+                  <div class="ct-top">
+                    <div class="ct-brand">
+                      <img src="assets/djp.png" alt="" width="54" height="24" />
+                      <img src="assets/coretax.png" alt="" width="92" height="16" />
+                    </div>
+                    <div class="ct-search">Cari layanan… <kbd>Ctrl K</kbd></div>
+                    <div class="ct-tools"><span></span><span></span><span>ID</span></div>
+                  </div>
+                  <nav class="ct-tabs">
+                    <span>Portal Saya</span>
+                    <span class="is-on">e-Faktur</span>
+                    <span>eBUPOT</span>
+                    <span>SPT</span>
+                    <span>Pembayaran</span>
+                  </nav>
+                  <div class="ct-body">
+                    <aside class="ct-side">
+                      <strong>e-Faktur</strong>
+                      <span class="is-on">Dasbor e-Faktur</span>
+                      <span>Dashboard</span>
+                      <span>e-Faktur</span>
+                    </aside>
+                    <div class="ct-main">
+                      <p class="ct-crumb">Beranda › e-Faktur</p>
+                      <h3>Dasbor e-Faktur</h3>
+                      <div class="ct-cards">
+                        <article>
+                          <small>Faktur Keluaran</small>
+                          <strong data-count="128">0</strong>
+                        </article>
+                        <article>
+                          <small>PPN Terutang</small>
+                          <strong data-count="42">0</strong>
+                        </article>
+                        <article>
+                          <small>Status SPT</small>
+                          <strong class="ct-ok">Siap</strong>
+                        </article>
+                      </div>
+                      <table class="ct-table">
+                        <tr><th>No. Faktur</th><th>Status</th></tr>
+                        <tr><td>010.001-26.000128</td><td>Disetujui</td></tr>
+                        <tr><td>010.001-26.000129</td><td>Draf</td></tr>
+                      </table>
+                      <p class="ct-badge">
+                        <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"><path class="offer-tick" d="M5 12.5 10 17.5 19 7.5"/></svg>
+                        SPT Tahunan berhasil dilaporkan
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="laptop-base"><span class="laptop-notch"></span></div>
+            <span class="laptop-shadow" aria-hidden="true"></span>
+          </div>
+          <ul class="laptop-callouts">
+            <li class="callout callout-l" style="--i: 0">
+              <span>e-Faktur rapi</span>
+              <svg class="callout-line" viewBox="0 0 120 40" aria-hidden="true"><path pathLength="1" d="M2 14 C36 2, 70 40, 116 26"/></svg>
+            </li>
+            <li class="callout callout-r" style="--i: 1">
+              <svg class="callout-line" viewBox="0 0 120 40" aria-hidden="true"><path pathLength="1" d="M118 14 C84 2, 50 40, 4 26"/></svg>
+              <span>SPT tepat waktu</span>
+            </li>
+            <li class="callout callout-l2" style="--i: 2">
+              <span>Bukti potong lengkap</span>
+              <svg class="callout-line" viewBox="0 0 120 40" aria-hidden="true"><path pathLength="1" d="M2 30 C40 40, 76 2, 116 12"/></svg>
+            </li>
+          </ul>
+          </div>
+        </div>
+      </section>
+
+      <div class="marquee" aria-hidden="true">
+        <div class="marquee-track">
+          <span>Tax Planning • Pelaporan • Kepatuhan • e-Faktur • SPT • eBUPOT • </span>
+          <span>Tax Planning • Pelaporan • Kepatuhan • e-Faktur • SPT • eBUPOT • </span>
+        </div>
+      </div>
+
       <section class="section offer" id="layanan">
+        <svg class="offer-float offer-float-a" viewBox="0 0 40 48" aria-hidden="true">
+          <rect x="3" y="3" width="34" height="42" rx="6" fill="none" stroke="currentColor" stroke-width="2.4"/>
+          <rect x="9" y="9" width="22" height="9" rx="2" fill="currentColor" opacity="0.35"/>
+          <g fill="currentColor"><circle cx="12" cy="26" r="2.2"/><circle cx="20" cy="26" r="2.2"/><circle cx="28" cy="26" r="2.2"/><circle cx="12" cy="34" r="2.2"/><circle cx="20" cy="34" r="2.2"/><circle cx="28" cy="34" r="2.2"/></g>
+        </svg>
+        <svg class="offer-float offer-float-b" viewBox="0 0 40 48" aria-hidden="true">
+          <path d="M6 4 H26 L35 13 V44 H6 Z" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M26 4 V13 H35" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"/>
+          <path d="M12 22 H29 M12 29 H29 M12 36 H22" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+        </svg>
         <div class="container">
           <div class="offer-story">
-            <div class="offer-statement">
+            <div class="offer-statement reveal">
               <h2 class="section-title" data-bind="layanan-title">Mengelola pajak bukan hanya tentang menghitung dan melaporkan.</h2>
             </div>
-            <ul class="offer-principles" aria-label="Prinsip pengelolaan pajak">
+            <ul class="offer-principles reveal-play" aria-label="Prinsip pengelolaan pajak">
               <li style="--d: 80ms">Rapi</li>
               <li style="--d: 180ms">Akurat</li>
               <li style="--d: 280ms">Sesuai aturan</li>
             </ul>
-            <p class="offer-partner" data-bind="layanan-partner">
+            <p class="offer-partner reveal-play" data-bind="layanan-partner">
               Di TaxWise Consulting, kami hadir sebagai mitra terpercaya yang siap membantu individu maupun perusahaan dalam mengelola kewajiban perpajakan secara profesional, sehingga Anda dapat lebih fokus pada pengembangan bisnis.
             </p>
           </div>
             <h3 class="offer-list-title" data-bind="layanan-list-title">Layanan kami meliputi</h3>
-            <div class="offer-grid" id="pillars">
+            <div class="offer-grid reveal-play" id="pillars">
               <article class="offer-card" style="--d:0ms">
                 <span class="offer-check" aria-hidden="true">
                   <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path class="offer-tick" d="M5 12.5 10 17.5 19 7.5" /></svg>
@@ -159,7 +272,7 @@
                 <h3>Pendampingan Kepatuhan Pajak</h3>
               </article>
             </div>
-          <aside class="offer-close">
+          <aside class="offer-close reveal">
             <p data-bind="layanan-close">
               Dengan pengelolaan yang baik, Anda dapat meminimalkan risiko kesalahan administrasi sekaligus memastikan bisnis berjalan dengan lebih tenang. Percayakan kebutuhan perpajakan Anda kepada TaxWise Consulting. Bersama kami, pengelolaan pajak menjadi lebih tertata, efisien, dan memberikan ketenangan dalam menjalankan usaha.
             </p>
@@ -170,7 +283,7 @@
       <section class="section section-muted section-schedule" id="cara-mulai">
         <div class="container">
           <div class="schedule-cta">
-            <div class="schedule-copy">
+            <div class="schedule-copy reveal">
               <h2 class="section-title" data-bind="proses-title">Yuk jadwalkan konsultasimu bareng TaxWise!</h2>
               <a class="btn btn-wa" data-wa href="https://wa.me/6282155534440" rel="noopener noreferrer" target="_blank">
                 <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true">
@@ -192,7 +305,7 @@
 
       <section class="section section-audience" id="untuk-siapa">
         <div class="container">
-          <h2 class="section-title" data-bind="audience-title">Untuk siapa?</h2>
+          <h2 class="section-title reveal" data-bind="audience-title">Untuk siapa?</h2>
           <div class="cards" id="audience-cards"></div>
         </div>
       </section>
@@ -219,7 +332,7 @@
 
       <section class="section" id="sharing">
         <div class="container">
-          <h2 class="section-title" data-bind="sharing-title">Sharing Pajak</h2>
+          <h2 class="section-title reveal" data-bind="sharing-title">Sharing Pajak</h2>
           <p class="lede" data-bind="sharing-intro">
             Cuplikan tips dan berita pajak—versi singkat, ramah dibaca.
           </p>
@@ -233,7 +346,7 @@
 
       <section class="section section-muted" id="faq">
         <div class="container faq-wrap">
-          <h2 class="section-title" data-bind="faq-title">Sebelum isi form</h2>
+          <h2 class="section-title reveal" data-bind="faq-title">Sebelum isi form</h2>
           <p class="lede" data-bind="faq-intro">
             Empat hal yang paling sering ditanyakan. Jawabannya mengikuti cara kerja situs ini.
           </p>
@@ -243,11 +356,11 @@
 
       <section class="section" id="konsultasi">
         <div class="container form-wrap">
-          <h2 class="section-title" data-bind="form-title">Ceritakan dulu, gratis.</h2>
-          <p class="lede" data-bind="form-intro">
+          <h2 class="section-title reveal" data-bind="form-title">Ceritakan dulu, gratis.</h2>
+          <p class="lede reveal" data-bind="form-intro">
             Isi singkat. Tombol membuka WhatsApp dengan pesan yang sudah dirapikan. Data tidak disimpan di situs ini.
           </p>
-          <form id="konsultasi-form" class="form" novalidate>
+          <form id="konsultasi-form" class="form reveal" novalidate>
             <div class="field">
               <label for="name">Nama</label>
               <input id="name" name="name" type="text" autocomplete="name" required />
@@ -282,6 +395,9 @@
       </section>
     </main>
 
+    <svg class="wave-divider wave-divider-footer" viewBox="0 0 1440 64" preserveAspectRatio="none" aria-hidden="true">
+      <path fill="#1aa3e8" d="M0 28 C240 64 480 0 720 24 C960 48 1200 8 1440 32 L1440 64 L0 64 Z"/>
+    </svg>
     <footer class="site-footer">
       <div class="container footer-grid">
         <div>
@@ -336,6 +452,6 @@
       <span>WhatsApp</span>
     </a>
 
-    <script type="module" src="js/main.js?v=16"></script>
+    <script type="module" src="js/main.js?v=17"></script>
   </body>
 </html>

@@ -118,9 +118,9 @@ function renderFromContent(c) {
   if (faq) {
     faq.innerHTML = c.faq.items
       .map(
-        (item) => `<details class="faq-item">
+        (item) => `<details class="faq-item reveal">
           <summary>${item.q}</summary>
-          <p>${item.a}</p>
+          <div class="faq-body"><p>${item.a}</p></div>
         </details>`
       )
       .join("");
@@ -147,8 +147,11 @@ async function boot() {
   renderFromContent(content);
   renderArticles(content);
   initForm(content);
-  initRise();
+  initReveal();
   initParallax();
+  initLaptop();
+  initScrollChrome();
+  initSpotlight();
 }
 
 function initParallax() {
@@ -198,13 +201,27 @@ function initParallax() {
   update();
 }
 
-function initRise() {
-  const nodes = document.querySelectorAll(".rise");
-  const reduce = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  if (reduce || !("IntersectionObserver" in window)) {
-    nodes.forEach((el) => el.classList.add("is-in"));
+const clamp01 = (v) => Math.min(1, Math.max(0, v));
+const easeOut = (t) => 1 - Math.pow(1 - t, 3);
+const prefersReduced = () => window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+const REVEAL_SELECTOR = ".reveal, .rise, .reveal-play";
+
+function initReveal() {
+  const groups = ["#audience-cards", "#article-grid", "#faq-list"];
+  const stagger = () =>
+    groups.forEach((sel) => {
+      document.querySelectorAll(`${sel} > .reveal`).forEach((el, i) => el.style.setProperty("--i", i % 6));
+    });
+  stagger();
+
+  if (prefersReduced() || !("IntersectionObserver" in window)) {
+    const showAll = () => document.querySelectorAll(REVEAL_SELECTOR).forEach((el) => el.classList.add("is-in"));
+    showAll();
+    new MutationObserver(showAll).observe(qs("#konten"), { childList: true, subtree: true });
     return;
   }
+
   const io = new IntersectionObserver(
     (entries) => {
       entries.forEach((entry) => {
@@ -213,9 +230,185 @@ function initRise() {
         io.unobserve(entry.target);
       });
     },
-    { threshold: 0.28, rootMargin: "0px 0px -8% 0px" }
+    { threshold: 0.18, rootMargin: "0px 0px -6% 0px" }
   );
-  nodes.forEach((el) => io.observe(el));
+  const watch = () =>
+    document.querySelectorAll(REVEAL_SELECTOR).forEach((el) => {
+      if (!el.classList.contains("is-in")) io.observe(el);
+    });
+  watch();
+
+  new MutationObserver(() => {
+    stagger();
+    watch();
+  }).observe(qs("#konten"), { childList: true, subtree: true });
+}
+
+function initScrollChrome() {
+  const header = qs(".site-header");
+  const bar = qs(".scroll-progress");
+  let frame = 0;
+
+  const update = () => {
+    frame = 0;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const ratio = max > 0 ? clamp01(window.scrollY / max) : 0;
+    if (bar) bar.style.setProperty("--scroll", ratio.toFixed(4));
+    if (header) header.classList.toggle("is-scrolled", window.scrollY > 8);
+  };
+  const requestUpdate = () => {
+    if (!frame) frame = requestAnimationFrame(update);
+  };
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate, { passive: true });
+  update();
+
+  const links = [...document.querySelectorAll("#site-nav a[href^='#']")];
+  if (!links.length || !("IntersectionObserver" in window)) return;
+  const byId = new Map(links.map((a) => [a.getAttribute("href").slice(1), a]));
+  const sections = [...byId.keys()].map((id) => document.getElementById(id)).filter(Boolean);
+  const visible = new Map();
+
+  const spy = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((e) => visible.set(e.target.id, e.isIntersecting ? e.intersectionRatio : 0));
+      let best = null;
+      let bestRatio = 0;
+      sections.forEach((s) => {
+        const r = visible.get(s.id) || 0;
+        if (r > bestRatio) {
+          best = s.id;
+          bestRatio = r;
+        }
+      });
+      links.forEach((a) => {
+        const on = a === byId.get(best);
+        a.classList.toggle("is-active", on);
+        if (on) a.setAttribute("aria-current", "true");
+        else a.removeAttribute("aria-current");
+      });
+    },
+    { rootMargin: "-35% 0px -45% 0px", threshold: [0, 0.01, 0.25, 0.5, 0.75, 1] }
+  );
+  sections.forEach((s) => spy.observe(s));
+}
+
+function initLaptop() {
+  const stage = qs("#coretax");
+  if (!stage) return;
+  const counters = [...stage.querySelectorAll("[data-count]")];
+  const setCount = (ratio) =>
+    counters.forEach((el) => {
+      el.textContent = Math.round(Number(el.dataset.count) * ratio).toLocaleString("id-ID");
+    });
+
+  if (prefersReduced()) {
+    stage.classList.add("is-open");
+    setCount(1);
+    return;
+  }
+
+  const desktop = window.matchMedia("(min-width: 768px)");
+  const sticky = qs(".laptop-sticky", stage);
+  let frame = 0;
+
+  const update = () => {
+    frame = 0;
+    if (!desktop.matches) return;
+    const rect = stage.getBoundingClientRect();
+    if (rect.bottom < 0 || rect.top > window.innerHeight) return;
+    const top = parseFloat(getComputedStyle(sticky).top) || 0;
+    const range = stage.offsetHeight - sticky.offsetHeight;
+    const progress = range > 0 ? clamp01((top - rect.top) / range) : 1;
+    const open = easeOut(clamp01(progress / 0.45));
+    const p = clamp01((progress - 0.45) / 0.45);
+    stage.style.setProperty("--open", open.toFixed(4));
+    stage.style.setProperty("--p", p.toFixed(4));
+    setCount(easeOut(clamp01((p - 0.26) / 0.34)));
+  };
+  const requestUpdate = () => {
+    if (!frame) frame = requestAnimationFrame(update);
+  };
+
+  let counted = false;
+  const countUp = () => {
+    if (counted) return;
+    counted = true;
+    const start = performance.now() + 1300;
+    const tick = (now) => {
+      const t = clamp01((now - start) / 1400);
+      setCount(easeOut(t));
+      if (t < 1) requestAnimationFrame(tick);
+    };
+    requestAnimationFrame(tick);
+  };
+
+  const io =
+    "IntersectionObserver" in window
+      ? new IntersectionObserver(
+          (entries) => {
+            if (desktop.matches || !entries.some((e) => e.isIntersecting)) return;
+            stage.classList.add("is-open");
+            countUp();
+            io.disconnect();
+          },
+          { threshold: 0.35 }
+        )
+      : null;
+
+  const onMode = () => {
+    if (desktop.matches) {
+      stage.classList.remove("is-open");
+      requestUpdate();
+    } else {
+      stage.style.removeProperty("--open");
+      stage.style.removeProperty("--p");
+      if (io) io.observe(stage);
+      else {
+        stage.classList.add("is-open");
+        setCount(1);
+      }
+    }
+  };
+
+  window.addEventListener("scroll", requestUpdate, { passive: true });
+  window.addEventListener("resize", requestUpdate, { passive: true });
+  if (typeof desktop.addEventListener === "function") desktop.addEventListener("change", onMode);
+  onMode();
+}
+
+function initSpotlight() {
+  const fine = window.matchMedia("(min-width: 768px) and (hover: hover)");
+  if (!fine.matches || prefersReduced()) return;
+  const SELECTOR = ".card, .offer-card, .faq-item";
+
+  document.addEventListener(
+    "pointermove",
+    (e) => {
+      const card = e.target.closest?.(SELECTOR);
+      if (!card) return;
+      const r = card.getBoundingClientRect();
+      const x = e.clientX - r.left;
+      const y = e.clientY - r.top;
+      card.style.setProperty("--mx", `${x}px`);
+      card.style.setProperty("--my", `${y}px`);
+      if (card.classList.contains("audience-card")) {
+        const rx = ((y / r.height) - 0.5) * -6;
+        const ry = ((x / r.width) - 0.5) * 8;
+        card.style.transform = `perspective(800px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg) translateY(-3px)`;
+      }
+    },
+    { passive: true }
+  );
+
+  document.addEventListener(
+    "pointerout",
+    (e) => {
+      const card = e.target.closest?.(".audience-card");
+      if (card && !card.contains(e.relatedTarget)) card.style.transform = "";
+    },
+    { passive: true }
+  );
 }
 
 boot().catch((err) => {
