@@ -25,22 +25,3 @@ export function waLink(phone, text = "") {
   const base = `https://wa.me/${phone}`;
   return text ? `${base}?text=${encodeURIComponent(text)}` : base;
 }
-
-export function initNav() {
-  const toggle = qs(".nav-toggle");
-  const nav = qs("#site-nav");
-  if (!toggle || !nav) return;
-
-  toggle.addEventListener("click", () => {
-    const open = toggle.getAttribute("aria-expanded") === "true";
-    toggle.setAttribute("aria-expanded", String(!open));
-    nav.classList.toggle("is-open", !open);
-  });
-
-  nav.addEventListener("click", (e) => {
-    if (e.target.closest("a")) {
-      toggle.setAttribute("aria-expanded", "false");
-      nav.classList.remove("is-open");
-    }
-  });
-}

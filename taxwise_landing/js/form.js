@@ -1,15 +1,10 @@
 import { qs, waLink } from "./utils.js";
 
-function digitsOnly(value) {
-  return value.replace(/\D/g, "");
-}
-
 function buildMessage(values, site) {
   const lines = [
     "Halo TaxWise Consulting, saya ingin konsultasi gratis.",
     "",
     `Nama: ${values.name}`,
-    `Nomor HP: ${values.phone}`,
     `Nama usaha / NPWP: ${values.business || "-"}`,
     `Kebutuhan: ${values.need}`,
     "",
@@ -32,7 +27,6 @@ export function initForm(content) {
     const data = new FormData(form);
     const values = {
       name: String(data.get("name") || "").trim(),
-      phone: String(data.get("phone") || "").trim(),
       business: String(data.get("business") || "").trim(),
       need: String(data.get("need") || "").trim(),
       question: String(data.get("question") || "").trim(),
@@ -40,13 +34,11 @@ export function initForm(content) {
 
     const invalid = {
       name: fields.name.required && values.name.length < 2,
-      phone: fields.phone.required && digitsOnly(values.phone).length < 8,
       need: fields.need.required && !values.need,
       question: fields.question.required && values.question.length < 5,
     };
 
     qs("#error-name").textContent = invalid.name ? errors.name : "";
-    qs("#error-phone").textContent = invalid.phone ? errors.phone : "";
     qs("#error-need").textContent = invalid.need ? errors.need : "";
     qs("#error-question").textContent = invalid.question ? errors.question : "";
 
