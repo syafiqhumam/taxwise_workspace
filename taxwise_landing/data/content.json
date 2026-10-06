@@ -4,15 +4,15 @@
     "shortName": "TaxWise",
     "locale": "id-ID",
     "title": "TaxWise Consulting | Konsultan Pajak Samarinda",
-    "description": "Konsultan pajak di Samarinda untuk UMKM, seller online, individu, dan perusahaan. Tax planning, pelaporan SPT, dan kepatuhan—ngobrol santai, hasilnya rapi.",
+    "description": "Pajak lebih tenang untuk UMKM, seller online, individu, dan perusahaan di Samarinda. Konsultasi awal gratis, penjelasan yang mudah, tanpa komitmen panjang.",
     "url": "https://taxwiseconsulting.id",
     "ogImage": "assets/og-placeholder.svg",
     "instagram": "https://instagram.com/taxwiseconsulting.id",
     "instagramHandle": "@taxwiseconsulting.id",
-    "whatsapp": "6282155334440",
-    "whatsappDisplay": "0821-553-4440",
-    "email": "halo@contoh-taxwise.id",
-    "emailPlaceholder": true,
+    "whatsapp": "6282155534440",
+    "whatsappDisplay": "082155534440",
+    "email": "cs@taxwise.id",
+    "emailPlaceholder": false,
     "address": "Jl. M. Yamin No.8, Samarinda",
     "city": "Samarinda",
     "region": "Kalimantan Timur",
@@ -24,8 +24,9 @@
   "nav": [
     { "label": "Layanan", "href": "#layanan" },
     { "label": "Untuk siapa", "href": "#untuk-siapa" },
-    { "label": "Sharing Pajak", "href": "#sharing" },
     { "label": "Kenapa TaxWise", "href": "#kenapa" },
+    { "label": "Sharing Pajak", "href": "#sharing" },
+    { "label": "FAQ", "href": "#faq" },
     { "label": "Kontak", "href": "#konsultasi" }
   ],
   "cta": {
@@ -34,167 +35,190 @@
     "formAnchor": "#konsultasi"
   },
   "hero": {
-    "eyebrow": "Samarinda · Konsultan pajak",
-    "headline": "Konsultan Pajak Samarinda",
-    "subheadline": "Teman ngobrol pajak buat UMKM, seller online, dan perusahaan—biar urusan pajak lebih tenang, tanpa bahasa yang bikin pusing.",
+    "headline": "Pajak itu wajib, tapi stresnya gak harus.",
+    "subheadline": "Bareng TaxWise Consulting Samarinda, urusan pajak jadi lebih ringan, rapi, dan patuh aturan. Tim berpengalaman, responsif, dan siap kasih solusi sesuai kebutuhan.",
     "primaryCta": "Konsultasi gratis",
     "secondaryCta": "Chat WhatsApp"
   },
   "services": {
     "id": "layanan",
-    "title": "Layanan",
-    "intro": "Tiga pilar yang paling sering kami bantu. Kamu pilih kebutuhanmu, kami bantu jelaskan langkahnya dengan bahasa yang mudah.",
+    "title": "Mengelola pajak bukan hanya tentang menghitung dan melaporkan.",
+    "partner": "Di TaxWise Consulting, kami hadir sebagai mitra terpercaya yang siap membantu individu maupun perusahaan dalam mengelola kewajiban perpajakan secara profesional, sehingga Anda dapat lebih fokus pada pengembangan bisnis.",
+    "listTitle": "Layanan kami meliputi",
     "items": [
       {
-        "id": "tax-planning",
-        "title": "Tax Planning",
-        "text": "Merapikan strategi pajak usaha agar lebih terencana. Kami bantu lihat opsi yang sesuai kondisi bisnis, tanpa janji yang berlebihan."
+        "id": "konsultasi",
+        "title": "Konsultasi Perpajakan",
+        "text": "Ceritakan kondisi usaha atau pribadi Anda. Kami bantu memetakan kewajiban yang relevan, menjelaskan pilihannya dengan bahasa yang jelas, dan menyusun langkah yang sesuai aturan yang berlaku."
       },
       {
-        "id": "pelaporan",
-        "title": "Pelaporan",
-        "text": "Pendampingan pelaporan SPT dan kewajiban rutin. Fokusnya: data lebih rapi, jadwal lebih jelas, dan kamu tahu apa yang perlu disiapkan."
+        "id": "administrasi",
+        "title": "Pengelolaan Administrasi Pajak",
+        "text": "Catatan, jadwal, dan berkas pajak dirapikan supaya tidak tercecer. Administrasinya dijaga akurat dan mudah ditelusuri, sehingga pelaporan tidak dimulai dari tumpukan dokumen."
+      },
+      {
+        "id": "dokumen",
+        "title": "Penyusunan Dokumen Perpajakan",
+        "text": "Dokumen yang dibutuhkan disusun rapi dan mengikuti ketentuan perpajakan yang berlaku. Anda tahu mana yang sudah lengkap dan mana yang masih perlu disiapkan."
       },
       {
         "id": "kepatuhan",
-        "title": "Kepatuhan",
-        "text": "Membantu menjaga kepatuhan pajak sehari-hari—dari kelengkapan dokumen sampai kesiapan jika ada pertanyaan dari otoritas."
+        "title": "Pendampingan Kepatuhan Pajak",
+        "text": "Kami dampingi agar kepatuhan tetap terjaga, dari kelengkapan sampai tindak lanjut yang perlu. Risikonya lebih terkendali, dan Anda bisa tetap fokus menjalankan usaha."
       }
     ],
-    "afterCta": "Belum yakin mulai dari mana? Ceritakan dulu, gratis."
+    "close": "Dengan pengelolaan yang baik, Anda dapat meminimalkan risiko kesalahan administrasi sekaligus memastikan bisnis berjalan dengan lebih tenang. Percayakan kebutuhan perpajakan Anda kepada TaxWise Consulting. Bersama kami, pengelolaan pajak menjadi lebih tertata, efisien, dan memberikan ketenangan dalam menjalankan usaha."
+  },
+  "process": {
+    "id": "cara-mulai",
+    "title": "Yuk jadwalkan konsultasimu bareng TaxWise!"
   },
   "audiences": {
     "id": "untuk-siapa",
-    "title": "Untuk siapa",
-    "intro": "Kalau urusan pajak terasa ribet atau kamu baru mulai merapikan administrasi, kamu di tempat yang tepat.",
+    "title": "Untuk siapa?",
     "items": [
       {
         "title": "UMKM",
-        "text": "Usaha lokal yang ingin administrasi pajak lebih tertata, dari pencatatan sampai pelaporan."
+        "text": "Usaha lokal yang ingin administrasi pajak lebih tertata, dari pencatatan sampai pelaporan.",
+        "image": "assets/audience/umkm.svg"
       },
       {
         "title": "Seller online",
-        "text": "Penjual di marketplace atau media sosial yang butuh panduan pajak yang relevan dengan cara jualan digital."
+        "text": "Penjual di marketplace atau media sosial yang butuh panduan pajak yang relevan dengan cara jualan digital.",
+        "image": "assets/audience/seller-online.svg"
       },
       {
         "title": "Individu",
-        "text": "Wajib pajak orang pribadi yang ingin lapor lebih tenang dan paham dokumen yang diperlukan."
+        "text": "Wajib pajak orang pribadi yang ingin lapor lebih tenang dan paham dokumen yang diperlukan.",
+        "image": "assets/audience/individu.svg"
       },
       {
         "title": "Perusahaan",
-        "text": "Badan usaha yang butuh dampingan perencanaan, pelaporan, dan kepatuhan secara berkelanjutan."
+        "text": "Badan usaha yang butuh dampingan perencanaan, pelaporan, dan kepatuhan secara berkelanjutan.",
+        "image": "assets/audience/perusahaan.svg"
       }
     ]
   },
   "articles": {
     "id": "sharing",
     "title": "Sharing Pajak",
-    "intro": "Cuplikan tips dan berita pajak—versi singkat, ramah dibaca. Kartu bertanda placeholder akan diganti dengan konten Instagram asli.",
+    "intro": "Cuplikan tips dan berita pajak—versi singkat, ramah dibaca.",
     "filters": [
       { "id": "all", "label": "Semua" },
       { "id": "tips", "label": "Tips" },
       { "id": "berita", "label": "Berita" }
     ],
-    "afterCta": "Punya pertanyaan dari artikel di atas? Langsung tanya kami."
+    "loadMoreLabel": "Muat lagi"
   },
   "articleItems": [
     {
-      "id": "pkp-umkm",
+      "id": "spt-kurang-bayar",
       "category": "tips",
       "categoryLabel": "Tips",
-      "title": "PKP untuk UMKM: kapan perlu dibahas?",
-      "excerpt": "Ringkasan umum tentang status PKP bagi pelaku UMKM. Fokusnya memahami kesiapan administrasi, bukan angka pasti.",
-      "date": "2026-09-12",
-      "placeholder": true
+      "title": "Spt Kurang Bayar?",
+      "excerpt": "SPT Tahunan berstatus \"Kurang Bayar\" tapi cashflow lagi ketat? Jangan panik! Kamu bisa mengajukan angsuran atau penundaan pembayaran secara legal ke DJP. Fasilitas ini bisa digunakan dengan syarat kamu patuh melaporkan SPT 2 tahun terakhir, menyertakan bukti kondisi keuangan, dan memberikan jaminan berupa aset berwujud.",
+      "date": "2026-06-10"
     },
     {
-      "id": "pajak-seller-online",
+      "id": "gak-semua-hibah-kena-pajak",
       "category": "tips",
       "categoryLabel": "Tips",
-      "title": "Pajak seller online: mulai dari yang sederhana",
-      "excerpt": "Pengingat untuk merapikan catatan penjualan online agar lebih siap saat pelaporan. Tanpa rincian tarif atau ambang tertentu.",
-      "date": "2026-09-05",
-      "placeholder": true
+      "title": "Jangan Panik! Tidak semua hibah kena pajak",
+      "excerpt": "Menerima hibah belum tentu langsung bebas pajak. Ada syarat dan kriteria tertentu yang harus dipenuhi agar hibah tidak dianggap sebagai objek pajak, mulai dari hubungan penerima, kelengkapan administrasi, hingga pencatatan dalam SPT. Jangan sampai salah paham dan berujung pada risiko pajak yang tidak diantisipasi. Pahami ketentuannya sebelum melakukan pengalihan harta melalui hibah.",
+      "date": "2026-06-16"
     },
     {
-      "id": "lapor-spt-tahunan",
+      "id": "pemicu-utama-sp2dk",
       "category": "tips",
       "categoryLabel": "Tips",
-      "title": "Lapor SPT tahunan tanpa panik di menit terakhir",
-      "excerpt": "Checklist suasana: kumpulkan bukti, cek identitas, dan siapkan pertanyaan. Detail teknis menyesuaikan kondisi masing-masing.",
-      "date": "2026-08-28",
-      "placeholder": true
+      "title": "Pemicu Utama SP2DK",
+      "excerpt": "SP2DK adalah surat keterangan pemenuhan kewajiban perpajakan. Jika belum melaporkan SPT Tahunan, kamu akan dikenakan sanksi administrasi berupa bunga denda 2% per bulan dari jumlah pajak yang terutang. Hal ini bertujuan agar wajib pajak patuh melaporkan SPT Tahunan untuk menghindari pengenaan sanksi administrasi yang lebih besar. Pastikan untuk melaporkan SPT Tahunan sebelum melakukan pemenuhan kewajiban perpajakan lainnya.",
+      "date": "2026-09-12"
     },
     {
-      "id": "npwp-nik",
+      "id": "karyawan-gak-bisa-jadi-kuasa-pajak",
       "category": "berita",
       "categoryLabel": "Berita",
-      "title": "NPWP dan NIK: yang perlu dicek di data wajib pajak",
-      "excerpt": "Pengantar netral soal pemadanan identitas. Cek data resmi di kanal otoritas; kami bantu arahkan langkah administrasinya.",
-      "date": "2026-08-20",
-      "placeholder": true
+      "title": "Karyawan gak bisa jadi kuasa pajak?",
+      "excerpt": "Kuasa pajak adalah surat yang memungkinkan seseorang untuk mewakili wajib pajak dalam melakukan kewajiban perpajakan. Dalam hal ini, karyawan tidak dapat menjadi kuasa pajak karena mereka bukan merupakan wajib pajak sendiri. Oleh karena itu, jika Anda ingin memberikan kuasa pajak, Anda harus menjadi wajib pajak sendiri atau memilih pihak lain yang memiliki NPWP.",
+      "date": "2026-09-07"
     },
     {
-      "id": "coretax",
+      "id": "kabar-buruk-seller-onlineshop",
       "category": "berita",
       "categoryLabel": "Berita",
-      "title": "Coretax: transisi sistem yang perlu diikuti pelan-pelan",
-      "excerpt": "Catatan umum tentang peralihan ke Coretax. Ikuti pengumuman resmi; kami dampingi jika ada yang membingungkan di praktiknya.",
-      "date": "2026-08-12",
-      "placeholder": true
+      "title": "Kabar Buruk Bagi Seller OnlineShop",
+      "excerpt": "Seller online yang terkena kabar buruk ini adalah mereka yang tidak memiliki NPWP atau NPWP yang tidak valid. Mereka akan dikenakan sanksi administrasi berupa bunga denda 2% per bulan dari jumlah pajak yang terutang. Hal ini bertujuan agar wajib pajak patuh melaporkan SPT Tahunan untuk menghindari pengenaan sanksi administrasi yang lebih besar. Pastikan untuk melaporkan SPT Tahunan sebelum melakukan pemenuhan kewajiban perpajakan lainnya.",
+      "date": "2026-09-15"
     },
     {
-      "id": "tanya-jawab",
+      "id": "usaha-kecil-harus-bayar-pph-juga",
       "category": "tips",
       "categoryLabel": "Tips",
-      "title": "Tanya jawab pajak yang sering muncul di chat",
-      "excerpt": "Kumpulan pertanyaan umum dari pelaku usaha. Jawaban selalu disesuaikan kasus—jangan meniru contoh orang lain secara mentah.",
-      "date": "2026-08-04",
-      "placeholder": true
+      "title": "Usaha Kecil Harus Bayar PPh juga?",
+      "excerpt": "Usaha kecil yang belum memiliki NPWP atau NPWP yang tidak valid akan dikenakan sanksi administrasi berupa bunga denda 2% per bulan dari jumlah pajak yang terutang. Hal ini bertujuan agar wajib pajak patuh melaporkan SPT Tahunan untuk menghindari pengenaan sanksi administrasi yang lebih besar. Pastikan untuk melaporkan SPT Tahunan sebelum melakukan pemenuhan kewajiban perpajakan lainnya.",
+      "date": "2026-07-22"
     }
   ],
   "why": {
     "id": "kenapa",
-    "title": "Kenapa TaxWise",
-    "intro": "Kami dekat secara lokasi, ramah di komunikasi, dan fokus bantu kamu paham—bukan cuma ‘sudah beres’ tanpa penjelasan.",
+    "title": "Kenapa TaxWise?",
     "points": [
       {
-        "title": "Lokal Samarinda",
+        "title": "Jl. M. Yamin No.8, Samarinda",
         "text": "Bertemu atau koordinasi lebih mudah. Alamat kami di Jl. M. Yamin No.8."
       },
       {
-        "title": "Bahasa yang ngalir",
-        "text": "Penjelasan pajak dibuat ringan, seperti ngobrol di Instagram—tetap profesional."
-      },
-      {
-        "title": "Untuk usaha kecil sampai badan",
+        "title": "Untuk UMKM sampai Perusahaan",
         "text": "UMKM, seller online, individu, dan perusahaan punya alur yang berbeda; kami sesuaikan."
       },
       {
         "title": "Konsultasi awal gratis",
         "text": "Ceritakan dulu kebutuhanmu lewat formulir atau WhatsApp. Belum ada komitmen panjang."
+      },
+      {
+        "title": "Urus pajak lebih mudah",
+        "text": "Bareng TaxWise, urusan pajak jadi lebih ringan dan jelas langkahnya."
       }
     ],
-    "photoAlt": "Placeholder foto tim TaxWise Consulting di Samarinda",
-    "photoCaption": "Foto tim — placeholder, akan diganti foto asli"
+    "photoSrc": "assets/team.png",
+    "photoAlt": "Tim TaxWise Consulting Samarinda",
+    "photoCaption": "Tim TaxWise Consulting, Samarinda"
+  },
+  "faq": {
+    "id": "faq",
+    "title": "Sebelum isi form",
+    "intro": "Empat hal yang paling sering ditanyakan. Jawabannya mengikuti cara kerja situs ini.",
+    "items": [
+      {
+        "q": "Apakah konsultasi awal berbayar?",
+        "a": "Tidak. Konsultasi awal gratis. Kamu cerita dulu, lalu putuskan apakah mau lanjut."
+      },
+      {
+        "q": "Apakah data saya disimpan di situs ini?",
+        "a": "Tidak. Form tidak menyimpan data. Setelah valid, pesan dibuka di WhatsApp supaya kamu yang mengirimnya."
+      },
+      {
+        "q": "Apakah harus datang ke kantor?",
+        "a": "Tidak wajib. Bisa mulai lewat WhatsApp. Kalau ingin bertemu, alamat kami di Jl. M. Yamin No.8, Samarinda."
+      },
+      {
+        "q": "Apakah cocok untuk UMKM dan seller online?",
+        "a": "Ya. Kami dampingi UMKM, seller online, individu, dan perusahaan. Alurnya disesuaikan dengan cara usahamu berjalan."
+      }
+    ]
   },
   "form": {
     "id": "konsultasi",
-    "title": "Form konsultasi",
-    "intro": "Isi singkat di bawah. Setelah valid, tombol akan membuka WhatsApp dengan pesan yang sudah dirapikan. Tidak ada data yang disimpan di situs ini.",
+    "title": "Ceritakan dulu, gratis.",
+    "intro": "Isi singkat. Tombol membuka WhatsApp dengan pesan yang sudah dirapikan. Data tidak disimpan di situs ini.",
     "submitLabel": "Kirim via WhatsApp",
-    "emailCta": "atau kirim email",
     "successHint": "WhatsApp akan terbuka di tab baru.",
     "fields": {
       "name": {
         "label": "Nama",
         "required": true,
         "autocomplete": "name"
-      },
-      "phone": {
-        "label": "Nomor HP",
-        "required": true,
-        "autocomplete": "tel"
       },
       "business": {
         "label": "Nama usaha / NPWP",
@@ -206,10 +230,10 @@
         "required": true,
         "options": [
           { "value": "", "label": "Pilih kebutuhan" },
-          { "value": "Tax planning", "label": "Tax planning" },
-          { "value": "Pelaporan SPT", "label": "Pelaporan SPT" },
-          { "value": "Kepatuhan / pemeriksaan", "label": "Kepatuhan / pemeriksaan" },
-          { "value": "Sengketa", "label": "Sengketa" },
+          { "value": "Konsultasi Perpajakan", "label": "Konsultasi Perpajakan" },
+          { "value": "Pengelolaan Administrasi Pajak", "label": "Pengelolaan Administrasi Pajak" },
+          { "value": "Penyusunan Dokumen Perpajakan", "label": "Penyusunan Dokumen Perpajakan" },
+          { "value": "Pendampingan Kepatuhan Pajak", "label": "Pendampingan Kepatuhan Pajak" },
           { "value": "Lainnya", "label": "Lainnya" }
         ]
       },
@@ -220,12 +244,11 @@
     },
     "errors": {
       "name": "Nama wajib diisi.",
-      "phone": "Nomor HP wajib diisi (minimal 8 digit).",
       "need": "Pilih kebutuhan konsultasi.",
       "question": "Tuliskan pertanyaanmu."
     }
   },
   "footer": {
-    "blurb": "Konsultan pajak Samarinda. Ngobrol dulu, rapiin belakangan."
+    "blurb": "Konsultan Pajak Samarinda (Registered)."
   }
 }
