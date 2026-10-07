@@ -22,6 +22,7 @@
     "mapsLabel": "Lihat di Google Maps"
   },
   "nav": [
+    { "label": "Coretax", "href": "#coretax" },
     { "label": "Layanan", "href": "#layanan" },
     { "label": "Untuk siapa", "href": "#untuk-siapa" },
     { "label": "Kenapa TaxWise", "href": "#kenapa" },
@@ -44,7 +45,7 @@
     "id": "layanan",
     "title": "Mengelola pajak bukan hanya tentang menghitung dan melaporkan.",
     "partner": "Di TaxWise Consulting, kami hadir sebagai mitra terpercaya yang siap membantu individu maupun perusahaan dalam mengelola kewajiban perpajakan secara profesional, sehingga Anda dapat lebih fokus pada pengembangan bisnis.",
-    "listTitle": "Layanan kami meliputi",
+    "listTitle": "Layanan Kami",
     "items": [
       {
         "id": "konsultasi",
@@ -187,8 +188,7 @@
   },
   "faq": {
     "id": "faq",
-    "title": "Sebelum isi form",
-    "intro": "Empat hal yang paling sering ditanyakan. Jawabannya mengikuti cara kerja situs ini.",
+    "title": "Yang Sering Ditanyakan",
     "items": [
       {
         "q": "Apakah konsultasi awal berbayar?",
@@ -210,8 +210,8 @@
   },
   "form": {
     "id": "konsultasi",
-    "title": "Ceritakan dulu, gratis.",
-    "intro": "Isi singkat. Tombol membuka WhatsApp dengan pesan yang sudah dirapikan. Data tidak disimpan di situs ini.",
+    "title": "Form Konsultasi",
+    "intro": "Silahkan isi form dibawah ini. Tombol akan membuka WhatsApp dengan pesan yang sudah dirapikan.",
     "submitLabel": "Kirim via WhatsApp",
     "successHint": "WhatsApp akan terbuka di tab baru.",
     "fields": {

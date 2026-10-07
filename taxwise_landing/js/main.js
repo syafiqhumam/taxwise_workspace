@@ -44,7 +44,6 @@ function renderFromContent(c) {
   setText("[data-bind='sharing-intro']", c.articles.intro);
   setText("[data-bind='why-title']", c.why.title);
   setText("[data-bind='faq-title']", c.faq.title);
-  setText("[data-bind='faq-intro']", c.faq.intro);
   setText("[data-bind='form-title']", c.form.title);
   setText("[data-bind='form-intro']", c.form.intro);
   setText("[data-bind='submit']", c.form.submitLabel);
@@ -78,8 +77,10 @@ function renderFromContent(c) {
       .map(
         (s) => `<article class="card audience-card reveal">
           <img class="audience-illust" src="${s.image}" alt="" width="120" height="96" loading="lazy" decoding="async" />
-          <h3>${s.title}</h3>
-          <p>${s.text}</p>
+          <div class="audience-card__copy">
+            <h3>${s.title}</h3>
+            <p>${s.text}</p>
+          </div>
         </article>`
       )
       .join("");
@@ -392,20 +393,6 @@ function initSpotlight() {
       const y = e.clientY - r.top;
       card.style.setProperty("--mx", `${x}px`);
       card.style.setProperty("--my", `${y}px`);
-      if (card.classList.contains("audience-card")) {
-        const rx = ((y / r.height) - 0.5) * -6;
-        const ry = ((x / r.width) - 0.5) * 8;
-        card.style.transform = `perspective(800px) rotateX(${rx.toFixed(2)}deg) rotateY(${ry.toFixed(2)}deg) translateY(-3px)`;
-      }
-    },
-    { passive: true }
-  );
-
-  document.addEventListener(
-    "pointerout",
-    (e) => {
-      const card = e.target.closest?.(".audience-card");
-      if (card && !card.contains(e.relatedTarget)) card.style.transform = "";
     },
     { passive: true }
   );

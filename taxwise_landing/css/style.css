@@ -152,7 +152,7 @@ summary:focus-visible {
   white-space: nowrap;
 }
 
-@media (min-width: 768px) and (max-width: 1099px) {
+@media (min-width: 1024px) and (max-width: 1099px) {
   .header-inner .site-nav {
     gap: 0.7rem;
     font-size: 0.86rem;
@@ -313,23 +313,10 @@ summary:focus-visible {
   pointer-events: none;
 }
 
-.hero-doodle-a {
-  width: 92px;
-  left: 8%;
-  top: 18%;
-}
-
 .hero-doodle-b {
   width: 28px;
   right: 18%;
   top: 12%;
-}
-
-.hero-doodle-c {
-  width: 46px;
-  left: 42%;
-  bottom: 16%;
-  opacity: 0.45;
 }
 
 @keyframes floaty {
@@ -352,13 +339,6 @@ summary:focus-visible {
   bottom: -1px;
   z-index: 2;
   height: 64px;
-}
-
-.wave-divider-footer {
-  display: block;
-  height: 52px;
-  margin-bottom: -1px;
-  background: var(--white);
 }
 
 .hero-sky {
@@ -564,10 +544,11 @@ summary:focus-visible {
 }
 
 .section-audience {
-  padding: 1.75rem 0;
+  padding: 1rem 0 1.75rem;
 }
 
 .section-audience .section-title {
+  margin-top: 0;
   margin-bottom: 0.65rem;
 }
 
@@ -577,10 +558,6 @@ summary:focus-visible {
 
 .section-audience .card {
   padding: 1.2rem 1.1rem;
-}
-
-.section-audience .audience-card {
-  padding-top: 1.35rem;
 }
 
 #kenapa {
@@ -628,6 +605,7 @@ summary:focus-visible {
 }
 
 #sharing .section-title {
+  margin-top: 0;
   margin-bottom: 0.65rem;
 }
 
@@ -657,11 +635,8 @@ summary:focus-visible {
 }
 
 #faq .section-title {
+  margin-top: 0;
   margin-bottom: 0.65rem;
-}
-
-#faq .lede {
-  margin-bottom: 1.25rem;
 }
 
 #faq .faq-list {
@@ -677,11 +652,13 @@ summary:focus-visible {
 }
 
 #konsultasi .section-title {
+  margin-top: 0;
   margin-bottom: 0.65rem;
 }
 
 #konsultasi .lede {
-  margin-bottom: 1.25rem;
+  max-width: none;
+  margin: 0 0 1.25rem;
 }
 
 #konsultasi .form {
@@ -814,7 +791,11 @@ summary:focus-visible {
 }
 
 .section-audience .section-title,
-#kenapa .section-title {
+#kenapa .section-title,
+#layanan .offer-list-title,
+#sharing .section-title,
+#faq .section-title,
+#konsultasi .section-title {
   font-family: "Caveat", cursive;
   font-weight: 700;
   font-size: clamp(2.15rem, 6.5vw, 3.35rem);
@@ -824,10 +805,6 @@ summary:focus-visible {
   color: var(--navy);
 }
 
-.audience-card {
-  padding-top: 1.6rem;
-}
-
 .audience-illust {
   display: block;
   width: 112px;
@@ -835,6 +812,116 @@ summary:focus-visible {
   height: auto;
   margin: 0 0 0.75rem;
   object-fit: contain;
+}
+
+.audience-card__copy {
+  min-width: 0;
+}
+
+@media (max-width: 767px) {
+  .section-audience .section-title {
+    margin-bottom: 0.5rem;
+  }
+
+  .section-audience .cards {
+    gap: 0.5rem;
+  }
+
+  .section-audience .card,
+  .section-audience .audience-card {
+    padding: 0.7rem 0.85rem;
+  }
+
+  .section-audience .audience-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.7rem;
+  }
+
+  .section-audience .audience-card:hover {
+    transform: none;
+  }
+
+  .section-audience .audience-card::before,
+  .section-audience .audience-card:hover::before {
+    opacity: 0;
+  }
+
+  .section-audience .audience-illust {
+    width: 60px;
+    flex-shrink: 0;
+    margin: 0;
+  }
+
+  .section-audience .audience-card__copy {
+    flex: 1;
+  }
+
+  .section-audience .audience-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .section-audience .audience-card p {
+    font-size: 0.875rem;
+    line-height: 1.45;
+  }
+}
+
+@media (min-width: 768px) {
+  .section-audience .audience-card {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 0.8rem;
+    padding: 0.75rem 0.9rem;
+  }
+
+  .section-audience .audience-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 22px color-mix(in srgb, var(--yellow-dim) 32%, transparent),
+      0 3px 8px color-mix(in srgb, var(--navy) 8%, transparent);
+  }
+
+  .section-audience .audience-illust {
+    flex-shrink: 0;
+    box-sizing: border-box;
+    width: 52px;
+    height: 52px;
+    margin: 0;
+    padding: 6px;
+    border-radius: 999px;
+    object-fit: contain;
+    background: color-mix(in srgb, var(--yellow-dim) 72%, var(--white));
+    border: 1px solid color-mix(in srgb, var(--navy) 16%, var(--yellow-dim));
+  }
+
+  .section-audience .audience-card__copy {
+    flex: 1;
+    min-width: 0;
+  }
+
+  .section-audience .audience-card h3 {
+    margin: 0 0 0.2rem;
+    font-size: 1.04rem;
+    line-height: 1.3;
+  }
+
+  .section-audience .audience-card p {
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+}
+
+@media (min-width: 1024px) {
+  .section-audience .cards {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.65rem;
+    padding: 0.35rem;
+    border-radius: calc(var(--radius) + 4px);
+    background: color-mix(in srgb, var(--sky) 28%, var(--white));
+  }
 }
 
 .pillar-index {
@@ -955,12 +1042,8 @@ summary:focus-visible {
   animation-delay: 360ms;
 }
 
-.offer-list-title {
-  margin: 2rem 0 1rem;
-  font-size: 1rem;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--navy);
+#layanan .offer-list-title {
+  margin: 2.5rem 0 0.65rem;
 }
 
 .offer-grid {
@@ -1200,9 +1283,9 @@ summary:focus-visible {
     z-index: 2;
     left: 0;
     right: 0;
-    top: 7%;
+    top: 10%;
     height: 48%;
-    padding: 1.15rem 0.7rem 0;
+    padding: 1.35rem 0.7rem 0;
     display: grid;
     grid-template-rows: auto minmax(0, 1fr);
     gap: 0.35rem;
@@ -1210,7 +1293,7 @@ summary:focus-visible {
   }
 
   #kenapa .why-grid-head {
-    margin: 0.25rem 0 0;
+    margin: 0.65rem 0 0;
     color: var(--white);
     text-align: center;
     font-family: "Caveat", cursive;
@@ -1257,14 +1340,14 @@ summary:focus-visible {
 
   #kenapa .why-doodle:nth-child(3) {
     left: 0;
-    bottom: 1.05rem;
+    bottom: 3.1rem;
     width: 52%;
     transform: rotate(-2deg);
   }
 
   #kenapa .why-doodle:nth-child(4) {
     right: 0;
-    bottom: 1.05rem;
+    bottom: 3.1rem;
     width: 48%;
     transform: rotate(3deg);
   }
@@ -1341,6 +1424,34 @@ summary:focus-visible {
   }
 }
 
+@media (min-width: 768px) and (max-width: 1023px) {
+  #kenapa .why-float {
+    top: 14%;
+  }
+
+  #kenapa .why-grid-head {
+    margin-top: 0.55rem;
+  }
+
+  #kenapa .why-grid-cards {
+    height: 12.75rem;
+  }
+
+  #kenapa .why-doodle:nth-child(3) {
+    left: 12%;
+    bottom: 5.75rem;
+    width: 40%;
+    transform: rotate(-2deg);
+  }
+
+  #kenapa .why-doodle:nth-child(4) {
+    right: 8%;
+    bottom: 5.75rem;
+    width: 38%;
+    transform: rotate(4deg);
+  }
+}
+
 .form {
   display: grid;
   gap: 1rem;
@@ -1397,7 +1508,8 @@ summary:focus-visible {
   justify-items: start;
 }
 
-.faq-wrap {
+.faq-wrap,
+.form-wrap {
   max-width: 760px;
 }
 
@@ -1716,7 +1828,7 @@ summary:focus-visible {
   }
 
   .section-audience {
-    padding: 1.5rem 0 1.4rem;
+    padding: 0.85rem 0 1.4rem;
   }
 
   #layanan {
@@ -1759,7 +1871,7 @@ summary:focus-visible {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1023px) {
   :root {
     --header-h: 56px;
   }
@@ -1778,17 +1890,6 @@ summary:focus-visible {
 @media (min-width: 768px) {
   .header-inner {
     gap: 1.5rem;
-  }
-
-  .site-nav {
-    display: flex;
-    position: static;
-    flex-direction: row;
-    align-items: center;
-    gap: 1.1rem;
-    background: transparent;
-    padding: 0;
-    border: 0;
   }
 
   .hero-grid {
@@ -1852,10 +1953,6 @@ summary:focus-visible {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
-  .form-wrap {
-    max-width: 640px;
-  }
-
   .float-wa {
     display: none;
   }
@@ -1865,7 +1962,7 @@ summary:focus-visible {
   }
 
   .section-audience {
-    padding: 2rem 0 2.1rem;
+    padding: 1.25rem 0 2.1rem;
   }
 
   #layanan {
@@ -1890,6 +1987,27 @@ summary:focus-visible {
 }
 
 @media (min-width: 1024px) {
+  .header-inner {
+    justify-content: space-between;
+    padding-block: 0;
+  }
+
+  .logo img {
+    height: 48px;
+    transform-origin: left center;
+  }
+
+  .site-nav {
+    display: flex;
+    position: static;
+    flex-direction: row;
+    align-items: center;
+    gap: 1.1rem;
+    background: transparent;
+    padding: 0;
+    border: 0;
+  }
+
   #sharing > .container,
   #untuk-siapa > .container,
   #layanan > .container,
@@ -1917,7 +2035,7 @@ summary:focus-visible {
   }
 
   .section-audience {
-    padding: 2.25rem 0;
+    padding: 1.35rem 0 2.25rem;
   }
 
   #layanan {
@@ -1960,10 +2078,6 @@ summary:focus-visible {
     gap: 0.85rem;
   }
 
-  .offer-list-title {
-    margin-top: 1.75rem;
-  }
-
   .schedule-photo {
     display: block;
     flex: 0 0 auto;
@@ -2004,6 +2118,7 @@ summary:focus-visible {
 }
 
 .section-audience .section-title,
+#layanan .offer-list-title,
 #sharing .section-title,
 #faq .section-title,
 #konsultasi .section-title {
@@ -2359,7 +2474,7 @@ summary:focus-visible {
 
 .laptop-base {
   height: 14px;
-  margin: 0 4%;
+  margin: 0;
   border-radius: 0 0 12px 12px;
   background: linear-gradient(180deg, #d5e3ef, #9eb4c8);
   position: relative;
@@ -2672,11 +2787,13 @@ summary:focus-visible {
   background-image: radial-gradient(color-mix(in srgb, var(--yellow-dim) 90%, var(--navy)) 1.6px, transparent 2px);
 }
 
-:is(#untuk-siapa, #sharing, #faq, #konsultasi) .section-title.reveal {
+:is(#untuk-siapa, #layanan, #sharing, #faq, #konsultasi) .section-title.reveal,
+#layanan .offer-list-title.reveal {
   transition: opacity 0.7s ease, transform 0.7s ease, filter 0.7s ease, background-size 0.8s cubic-bezier(0.22, 1, 0.36, 1) 0.35s;
 }
 
-:is(#untuk-siapa, #sharing, #faq, #konsultasi) .section-title.reveal:not(.is-in) {
+:is(#untuk-siapa, #layanan, #sharing, #faq, #konsultasi) .section-title.reveal:not(.is-in),
+#layanan .offer-list-title.reveal:not(.is-in) {
   background-size: 0 0.55rem;
 }
 
@@ -2839,7 +2956,8 @@ summary:focus-visible {
     animation: none;
   }
 
-  :is(#untuk-siapa, #sharing, #faq, #konsultasi) .section-title.reveal {
+  :is(#untuk-siapa, #layanan, #sharing, #faq, #konsultasi) .section-title.reveal,
+  #layanan .offer-list-title.reveal {
     transition: none;
     background-size: 7.5rem 0.55rem;
   }
