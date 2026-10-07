@@ -1,0 +1,8 @@
+{
+  "name": "taxwise-workspace",
+  "private": true,
+  "scripts": {
+    "dev": "npx --yes serve taxwise_landing -l 3000",
+    "preview": "npm run dev"
+  }
+}
