@@ -2478,20 +2478,24 @@ summary:focus-visible {
 }
 
 .laptop-base {
-  height: 14px;
+  height: 1.15rem;
   margin: 0;
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 0 14px 14px;
   background: linear-gradient(180deg, #d5e3ef, #9eb4c8);
   position: relative;
   z-index: 1;
+  transform-origin: 50% 0;
+  transform: scaleY(calc(0.9 + var(--open) * 0.18))
+    scaleX(calc(1 + var(--open) * 0.035));
+  will-change: transform;
 }
 
 .laptop-notch {
   position: absolute;
   left: 50%;
-  top: 2px;
+  top: 3px;
   width: 18%;
-  height: 5px;
+  height: 6px;
   transform: translateX(-50%);
   border-radius: 0 0 8px 8px;
   background: #7f97ab;
@@ -2506,7 +2510,7 @@ summary:focus-visible {
   border-radius: 50%;
   background: rgba(16, 40, 70, 0.22);
   filter: blur(8px);
-  transform: scaleX(calc(0.6 + var(--open) * 0.5));
+  transform: scaleX(calc(0.65 + var(--open) * 0.55));
   z-index: -1;
 }
 
