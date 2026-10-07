@@ -5,6 +5,7 @@
   --yellow: #ffe14a;
   --yellow-dim: #e4d48a;
   --sky: #e8f6fd;
+  --coretax-stage-top: #f4fbff;
   --white: #ffffff;
   --ink: #10233a;
   --muted: #3d5570;
@@ -339,6 +340,10 @@ summary:focus-visible {
   bottom: -1px;
   z-index: 2;
   height: 64px;
+}
+
+.wave-divider-hero path {
+  fill: var(--coretax-stage-top);
 }
 
 .hero-sky {
@@ -2135,7 +2140,7 @@ summary:focus-visible {
   --p: 0;
   position: relative;
   height: 220vh;
-  background: linear-gradient(180deg, #f4fbff 0%, var(--sky) 40%, #fff 100%);
+  background: linear-gradient(180deg, var(--coretax-stage-top) 0%, var(--sky) 40%, #fff 100%);
 }
 
 .laptop-stage::before {
